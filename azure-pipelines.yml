@@ -18,7 +18,7 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '$(System.DefaultWorkingDirectory)/src/BlazingPizza.Server/BlazingPizza.Server.csproj'
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --self-contained'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --self-contained --runtime win-x64'
     zipAfterPublish: false
 
 - task: PublishBuildArtifacts@1
