@@ -16,8 +16,8 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: true
-    workingDirectory: '$(Build.SourcesDirectory)\src'
+    publishWebProjects: false
+    projects: '$(Build.SourcesDirectory)\src\BlazingPizza.Server\BlazingPizza.Server.csproj'
 
 - task: PublishBuildArtifacts@1
   inputs:
