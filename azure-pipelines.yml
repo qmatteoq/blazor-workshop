@@ -17,7 +17,8 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: false
-    projects: '$(Build.SourcesDirectory)/blazor-workshop/src/BlazingPizza.Server/BlazingPizza.Server.csproj'
+    projects: '$(System.DefaultWorkingDirectory)/src/BlazingPizza.Server/BlazingPizza.Server.csproj'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
